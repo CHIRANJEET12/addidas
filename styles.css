@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+}
+
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/public/peakpx\ \(1\).jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+#counter {
+    color: #ffffff;
+    font-size: 13rem;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: 0.3s;
+    opacity: 0;
+    animation: reveal 1s ease-out forwards;
+    animation-delay: 0.2s;
+}
+
+.nav:hover {
+    background-color: aliceblue;
+    transition: 0.3s;
+}
+
+.link a {
+    font-weight: 200;
+    text-decoration: none;
+    color: rgb(24, 24, 24);
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.link a:hover {
+    font-weight: 500;
+    transition: 0.1s;
+}
+
+.profile {
+    background-color: rgb(240, 240, 240);
+    border-radius: 20%;
+    padding: 10px;
+}
+.profile a{
+    color: #212121
+}
+
+.main {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    opacity: 0;
+    animation: reveal 1s ease-out forwards;
+    animation-delay: 0.4s;
+}
+
+.left {
+    width: 45%;
+    padding: 100px;
+}
+
+.left h1 {
+    font-size: 4rem;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 600;
+}
+
+.left p {
+    font-size: 2rem;
+    font-weight: 200;
+}
+
+.right {
+    width: 55%;
+    background-color: #212121;
+    padding: 50px;
+    opacity: 0;
+    animation: reveal 1s ease-out forwards;
+    animation-delay: 0.8s;
+}
+::selection {
+    background-color: #fff70080; /* Background color for selected text */
+    color: #000; /* Text color for selected text */
+}
+::-webkit-scrollbar {
+    width: 12px; /* Width of the entire scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #0b0b0b; /* Color of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #000000; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Roundness of the scrollbar thumb */
+    border: 3px solid #f1f1f1; /* Space around the scrollbar thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color when hovering over the scrollbar thumb */
+}
+
+
+.right img {
+    width: 720px;
+    transform: rotate(-25deg);
+    height: 330px;
+    padding: 20px;
+    transition: 0.2s;
+    margin-top: 10px;
+    margin-left: -150px;
+}
+.right img:hover {
+    width: 720px;
+    transition: 0.2s;
+    transform: rotate(-15deg);
+    height: 330px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-left: -150px;
+}
+
+.word h1 {
+    color: aliceblue;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 4rem;
+    margin-left: 300px;
+    margin-top: -40px;
+    opacity: 0;
+    animation: reveal 1s ease-out forwards;
+    animation-delay: 1.2s;
+}
+
+.word h2 {
+    color: rgb(168, 168, 168);
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 4rem;
+    margin-left: 350px;
+    margin-top: -40px;
+    opacity: 0;
+    animation: reveal 1s ease-out forwards;
+    animation-delay: 1.4s;
+}
+
+@media only screen and (min-width: 344px) and (max-width: 765px) {
+    .left {
+        width: 45%;
+        padding: 10px 10px 10px;
+    }
+
+    .left h1 {
+        font-size: 1.2rem;
+        font-family: "Bebas Neue", sans-serif;
+        font-weight: 600;
+    }
+
+    .left p {
+        font-size: 1rem;
+        font-weight: 200;
+    }
+
+    .right {
+        width: 55%;
+        background-color: #212121;
+        padding: 20px 20px 20px;
+    }
+
+    .right img {
+        width: 230px;
+        transform: rotate(-25deg);
+        padding: 10px 10px 10px;
+        height: 120px;
+        margin-left: -50px;
+    }
+    .right img:hover {
+        width: 230px;
+        transition: 0.2s;
+        transform: rotate(-15deg);
+        height: 120px;
+        padding: 10px;
+        margin-top: -10px;
+        margin-left: -50px;
+    }
+
+    .word h1 {
+        color: aliceblue;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 1.2rem;
+        margin-left: 140px;
+        margin-top: -40px;
+    }
+
+    .word h2 {
+        color: rgb(168, 168, 168);
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 1.1rem;
+        margin-left: 140px;
+        margin-top: -40px;
+    }
+}
+
+@keyframes reveal {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
