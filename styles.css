@@ -197,6 +197,48 @@ body {
     animation: reveal 1s ease-out forwards;
     animation-delay: 1.4s;
 }
+.introcard {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    background-color: #fffbe9;
+}
+.e{
+    font-weight: 600;
+    font-family: "Bebas Neue", sans-serif;
+    margin-left: 30px;
+}
+
+.card0 {
+    border: 2px solid white;
+    width: 200px;
+    transition: 0.5s ease-in-out;
+    transform: scale(0.8);
+    position: relative; /* Add this to position the h1 correctly */
+}
+.card1 h2{
+    left: -30px;
+    font-weight: 100;
+}
+
+.card0 h1 {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    position: absolute; /* Position h1 absolutely within the card */
+    bottom: 10px; /* Adjust this to position the h1 as desired */
+    left: 50%;
+    transform: translateX(-50%);
+    color: white; /* Adjust the color as needed */
+}
+
+.card0:hover {
+    transform: scale(0.81);
+    width: 300px;
+}
+
+.card0:hover h1 {
+    opacity: 1;
+}
 .Ecos{
     color: #000;
     font-family: "Bebas Neue", sans-serif;
@@ -374,13 +416,15 @@ body {
         margin-left: 140px;
         margin-top: -40px;
     }
+
+    
     .card {
-        width: 30%;
+        width: 130px;
         background-color: #dfdfdf;
-        height: 100px;
-        border-radius: 10px;
-        border: 1px solid rgb(255, 255, 255);
-        box-shadow: 1px 1px 12px black;
+        height: 70px;
+        /* border-radius: 3px; */
+        /* border: 2px solid rgb(255, 255, 255); */
+        /* box-shadow: 1px 1px 5px black; */
         overflow: hidden;
         transition: transform 0.3s ease-in-out;
         position: relative;
@@ -394,11 +438,11 @@ body {
     }
     
     .card:hover {
-        transform:  scale(1);
+        transform: translate(-0px, -0px) scale(1);
     }
     
     .card:hover img {
-        transform: scale(1);
+        transform: scale(1.1);
     }
     .nor {
         width: 100%;
@@ -454,21 +498,21 @@ body {
         justify-content: flex-start;
         align-items: flex-start;
         gap: 20px;
-        margin-top: 320px;
+        margin-top: 380px;
     }
     .button{
-        padding: 2px 4px 2px;
+        padding: 2px 24px 2px;
         transition: 0.4s;
-        font-size: smaller;
+        font-size: 0.9rem;
         border: 2px solid black;
         font-family: "Bebas Neue", sans-serif;
     }
     .button:hover{
-        padding: 2px 4px 2px;
+        padding: 2px 14px 2px;
         transition: 0.4s;
         background-color: #0b0b0b;
         color: #dfdfdf;
-        font-size: smaller;
+        font-size: 1.05rem;
         border: 2px solid rgb(255, 255, 255);
         font-family: "Bebas Neue", sans-serif;
     }
@@ -483,6 +527,52 @@ body {
         margin-left: -70px;
         margin-top: -20px;
     }
+    .introcard {
+        display: flex;
+        align-items: center;
+        justify-self: center;
+        background-color: #fffbe9;
+        height: 200px;
+        width: 400px;
+    }
+    
+    .card0 {
+        border: 2px solid white;
+        width: 50px;
+        transition: 0.5s ease-in-out;
+        transform: scale(0.3);
+        z-index: 1;
+        position: relative; /* Add this to position the h1 correctly */
+    }
+    .card1{
+        z-index: 3;
+    }
+    .card1 h2{
+        margin-left: 30px;
+        color: #000000;
+        z-index: 3;
+        font-size: smaller;
+        font-family: "Bebas Neue", sans-serif;
+    }
+    
+    .card0 h1 {
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+        position: absolute; /* Position h1 absolutely within the card */
+        bottom: 10px; /* Adjust this to position the h1 as desired */
+        left: 50%;
+        transform: translateX(-50%);
+        color: white; /* Adjust the color as needed */
+    }
+    
+    .card0:hover {
+        transform: scale(0.31);
+        width: 100px;
+    }
+    
+    .card0:hover h1 {
+        opacity: 1;
+    }
 }
 
 @keyframes reveal {
@@ -496,3 +586,4 @@ body {
         transform: translateY(0);
     }
 }
+
